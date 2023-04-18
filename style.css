@@ -1,0 +1,226 @@
+/* font-family: 'Roboto', sans-serif; */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+}
+
+body{
+  background-color: rgb(232, 226, 226);
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.page{
+  display: flex;
+  gap: 19.2rem;
+  justify-content: center;
+
+}
+
+main{
+display: grid;
+/* width: 62rem; */
+height: 100vh;
+align-content: center;
+
+margin-top: -10rem;
+}
+
+.timer{
+  justify-self: center;
+  align-self: center;
+}
+
+main span{
+  font-family: 'Roboto', sans-serif;
+  /* font-size: 12.6rem; */
+  font-size: clamp( 7rem, 7rem + 4vw , 12.6rem) 
+} 
+
+main button, nav button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  transition: transform;
+  transition-duration: 0.5s;
+}
+
+main .controls{
+  display: flex;
+  gap: 4rem;
+  align-self: center;
+  justify-self: center;
+
+}
+
+main .controls img{
+  width: clamp( 2rem, 2.0rem + 2vw , 4.8rem) 
+}
+
+nav{
+  display: grid;
+  grid-template-areas: 
+  "A B"
+  "C D";
+  align-content: center;
+  row-gap: 3.2rem;
+  column-gap: 3.2rem ;
+}
+
+
+.cardColor svg path:nth-child(1) {
+fill: #02799D;
+}
+
+.cardColor svg path:nth-child(2) {
+  fill: aliceblue;
+}
+
+.controls button:hover{
+  transform: scale(1.1);
+}
+
+
+/* darkMode */
+
+.buttonsMode{
+  text-align: end;
+  padding: 6rem 6rem 0 0;
+}
+
+.hide{
+  display: none;
+}
+
+
+.bodyDarkMode{
+  background-color:black;
+  color: aliceblue;
+}
+
+
+.buttonDarkMode path{
+  fill: aliceblue;
+}
+
+.forVolume{
+  position: relative;
+}
+
+.volumeRange{
+  -webkit-appearance: none;
+  position: absolute;
+  width: 9rem;
+  height: 0.5rem;
+
+  background-color: black;
+  border-radius: 9999px;
+
+  bottom: 1.5rem;
+  left: 2.4rem;
+
+  /* overflow: hidden; */
+}
+
+nav input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1.1rem;
+  height: 1.1rem;
+
+  cursor:pointer;
+  background: black;
+  border-radius: 50%;
+}
+
+.inputDarkMode::-webkit-slider-thumb{
+  background: rgb(216, 214, 214);
+}
+
+.inputDarkMode{
+  background-color: rgb(231, 226, 226);
+}
+
+
+.cardDarkMode{
+  color: rgb(99, 94, 94);
+}
+
+
+.cardColorDarkMode svg path:nth-child(1) {
+  fill: #454646;
+  }
+  
+  .cardColorDarkMode svg path:nth-child(2) {
+    fill: aliceblue;
+  }
+
+
+  .cardColorSelected svg path:nth-child(1) {
+    fill: #07465a;
+    }
+
+
+@media (max-width: 50rem) {
+  body{
+    overflow-y: auto;
+  }
+  
+  .page{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    /* margin-top: 4rem; */
+  }
+
+  main{
+    height: auto;
+    width: auto;
+    /* padding: 0; */
+    /* margin: auto; */
+
+    margin-top: 5rem;
+  }
+
+  nav{
+    align-self: center;
+    row-gap: 2rem;
+    /* column-gap: 0; */
+    /* justify-self: center; */
+  }
+  .forVolume{
+    width: 10rem;
+    height: 12rem;
+  }
+  
+  nav button svg{
+    width: 10rem;
+    height: 12rem;
+  }
+
+  main .timer span, .controls{
+    /* display: grid; */
+    font-size: 8rem;
+  }
+
+  .volumeRange{
+    width: 7rem;
+    height:0.3rem ;
+    bottom: 1.5rem;
+    left: 1.55rem;
+  }
+
+  input[type='range']::-webkit-slider-thumb {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+
+
+}
